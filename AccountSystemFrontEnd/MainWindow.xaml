@@ -1,0 +1,47 @@
+﻿<Window x:Class="AccountSystemFrontEnd.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AccountSystemFrontEnd"
+        mc:Ignorable="d"
+        Title="Account System: Front-End" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <GroupBox Header="View Miles of the Logged In User" Margin="10" Padding="20">
+            <StackPanel Orientation="Vertical">
+                <Button x:Name="btnViewCurrency" Height="40" Content="View Miles" FontSize="24" VerticalAlignment="Top" 
+                        Margin="0 60 0 0" Click="btnViewCurrency_Click"/>
+                <TextBlock Text="Parsed JSON output from server:" Margin="0 30 0 0" FontSize="13"/>
+                <ListBox x:Name="lstViewOutput" Height="50" Margin="0 0 0 0"/>
+            </StackPanel>
+        </GroupBox>
+
+        <GroupBox Grid.Column="1" Header="Add Miles to Account" Margin="10" Padding="20">
+            <StackPanel Orientation="Vertical">
+                <TextBlock Text="Amount:"/>
+                <TextBox x:Name="txtAddAmount" Height="30" VerticalContentAlignment="Center" FontFamily="16" Margin="0 0 0 15"/>
+                <Button x:Name="btnAddCurrency" Height="40" Content="Add Miles" FontSize="24" VerticalAlignment="Top" 
+                        Click="btnAddCurrency_Click"/>
+                <TextBlock Text="Parsed JSON output from server:"  Margin="0 30 0 0" FontSize="13"/>
+                <ListBox x:Name="lstAddOutput" Height="50"/>
+            </StackPanel>
+        </GroupBox>
+
+        <GroupBox Grid.Column="2" Header="Subtract Miles from Account" Margin="10" Padding="20">
+            <StackPanel Orientation="Vertical">
+                <TextBlock Text="Amount:"/>
+                <TextBox x:Name="txtSubAmount" Height="30" VerticalContentAlignment="Center" FontFamily="16" Margin="0 0 0 15"/>
+                <Button x:Name="btnSubtractCurrency" Height="40" Content="Subtract Miles" FontSize="24" VerticalAlignment="Top" 
+                        Click="btnSubtractCurrency_Click"/>
+                <TextBlock Text="Parsed JSON output from server:"  Margin="0 30 0 0" FontSize="13"/>
+                <ListBox x:Name="lstSubtractOutput" Height="50"/>
+            </StackPanel>
+        </GroupBox>
+    </Grid>
+</Window>
